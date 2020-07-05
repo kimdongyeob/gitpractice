@@ -1,0 +1,3 @@
+press the play button on upper right
+and then go to project->running url and port->open the url->token is on terminal, maybe goorm
+
