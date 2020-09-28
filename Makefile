@@ -1,11 +1,14 @@
 CC = g++
 SRC := $(wildcard *.c)
+SRCC := $(wildcard *.cpp)
 OUT := $(SRC:%.c=%.o)
+OUTC := $(SRCC:%.cpp=%.o)
 
-all:$(OUT)
+
+all:$(OUT) $(OUTC)
 	
-%.o : %.c
+%.o : %.c %.cpp
 	$(CC) -o $@ $<
 
 clean:
-	$(RM) $(OUT)
+	$(RM) $(OUT) $(OUTC)
